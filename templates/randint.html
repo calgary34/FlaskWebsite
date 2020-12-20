@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Random Float{% endblock %}
+{% block content %}
+    <h1>Your random integer between {{low}} and {{high}} is: {{rand}}</h1>
+    <p>To get a random integer please enter localhost:5000/random/int/&lt;lowest>/&lt;highest></p>
+{% endblock %}

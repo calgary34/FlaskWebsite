@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Flask Template{% endblock %}
+{% block content %}
+    {% if no_params %}
+        <h1>Succesful!</h1>
+        <p>Flask has rendered this html page as a template correctly using <code>render_template</code>.</p>
+        <h2>Text:</h2><p>Change the text by entering localhost:5000/template/&lt;your text></p>
+    {% else %}
+        <h1>Succesful!</h1>
+        <p>Flask has rendered this html page as a template correctly using <code>render_template</code>.</code></p>
+        <h2>Text: {{x}}</h2><p>Change the text by entering localhost:5000/template/&lt;your text></p>
+     {% endif %}
+{% endblock %}

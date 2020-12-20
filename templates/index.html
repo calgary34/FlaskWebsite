@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+    {% if name==None %}
+        <h1>Home</h1>
+    {% else %}
+        <h1>Hello, {{name}}!</h1>
+    {% endif %}
+    <h3>Page list:</h2>
+    <ul>
+        <li><a href="/name">Enter your name</a></li>
+        <li><a href="/visits">Count the number of page visits</a></li>
+        <li><a href="/math">Math tools</a>
+          <li><a href="/math/pythagorean">Random Pythagorean Triples</a></li>
+        <li><a href="/leapyear">Leap Years (currently doesn't work)</a></li>
+        </li>
+        <li><a href="/random">Random generators</a>
+            <ul>
+                <li><a href="/random/int">Random integer</a></li>
+                <li><a href="/random/float">Random float</a></li>
+                <li><a href="/random/letter">Random letter</a> (<a href="/random/letter/upper">UPPERCASE</a>)
+                    <ul><li><a href="/random/letter/greek">Random Greek letter</a></li></ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="/redirect">Redirect page</a></li>
+        <li><a href="/template">Flask templating test</a></li>
+    </ul>
+{% endblock %}

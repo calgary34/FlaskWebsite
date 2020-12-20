@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Visits Counter {% endblock %}
+
+{% block content %}
+<p>You have visited this page {{count}} times.</p>
+<p>You have cleared your number of visits {{clearcount}} times.</p>
+<p>To reset your number of visits go to <a href="/clear-visits">/clear-visits</a></p>
+<p>To reset everything, clear your cookies.</p>
+{% endblock %}
