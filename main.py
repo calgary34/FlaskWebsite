@@ -5,6 +5,7 @@ from random import randint
 app=Flask(__name__)
 app.secret_key="hello123"
 def leapyear(year):
+    year=int(year)
     if year%4==0 and year%100!=0 and year%400!=0:
         return True
     elif year%4==0 and year%400==0:
